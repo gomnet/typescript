@@ -1,0 +1,11 @@
+D:\Lactafarma\TypeScript\CarDemo\AspNetCore.TypeScript\bin\Debug\netcoreapp2.0\AspNetCore.TypeScript.deps.json
+D:\Lactafarma\TypeScript\CarDemo\AspNetCore.TypeScript\bin\Debug\netcoreapp2.0\AspNetCore.TypeScript.runtimeconfig.json
+D:\Lactafarma\TypeScript\CarDemo\AspNetCore.TypeScript\bin\Debug\netcoreapp2.0\AspNetCore.TypeScript.runtimeconfig.dev.json
+D:\Lactafarma\TypeScript\CarDemo\AspNetCore.TypeScript\bin\Debug\netcoreapp2.0\AspNetCore.TypeScript.dll
+D:\Lactafarma\TypeScript\CarDemo\AspNetCore.TypeScript\obj\Debug\netcoreapp2.0\AspNetCore.TypeScript.csprojResolveAssemblyReference.cache
+D:\Lactafarma\TypeScript\CarDemo\AspNetCore.TypeScript\obj\Debug\netcoreapp2.0\AspNetCore.TypeScript.csproj.CoreCompileInputs.cache
+D:\Lactafarma\TypeScript\CarDemo\AspNetCore.TypeScript\obj\Debug\netcoreapp2.0\AspNetCore.TypeScript.AssemblyInfoInputs.cache
+D:\Lactafarma\TypeScript\CarDemo\AspNetCore.TypeScript\obj\Debug\netcoreapp2.0\AspNetCore.TypeScript.AssemblyInfo.cs
+D:\Lactafarma\TypeScript\CarDemo\AspNetCore.TypeScript\bin\Debug\netcoreapp2.0\AspNetCore.TypeScript.pdb
+D:\Lactafarma\TypeScript\CarDemo\AspNetCore.TypeScript\obj\Debug\netcoreapp2.0\AspNetCore.TypeScript.dll
+D:\Lactafarma\TypeScript\CarDemo\AspNetCore.TypeScript\obj\Debug\netcoreapp2.0\AspNetCore.TypeScript.pdb
