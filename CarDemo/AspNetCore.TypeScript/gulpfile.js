@@ -1,4 +1,4 @@
-﻿/// <binding BeforeBuild='clean' AfterBuild='min' Clean='clean' />
+﻿/// <binding BeforeBuild='clean' AfterBuild='min, copy' Clean='clean' />
 "use strict";
 
 var gulp = require("gulp"),   
@@ -14,10 +14,16 @@ var paths = {
 
 paths.js = "./scripts/**/*.js";
 paths.css = "./styles/**/*.css";
+paths.html = "./**/*.html";
 paths.minJs = paths.webroot + "js/**/*.min.js";
 paths.minCss = paths.webroot + "css/**/*.min.css";
 paths.concatJsDest = paths.webroot + "js/app.min.js";
+paths.HtmlDest = paths.webroot + "**/*.html";
 paths.concatCssDest = paths.webroot + "css/app.min.css";
+
+gulp.task("clean:html", function (cb) {
+    rimraf(paths.HtmlDest, cb);
+});
 
 gulp.task("clean:js", function (cb) {
     rimraf(paths.concatJsDest, cb);
@@ -27,7 +33,7 @@ gulp.task("clean:css", function (cb) {
     rimraf(paths.concatCssDest, cb);
 });
 
-gulp.task("clean", ["clean:js", "clean:css"]);
+gulp.task("clean", ["clean:js", "clean:css", "clean:html"]);
 
 gulp.task("min:js", function () {
     return gulp.src([paths.js], { base: "." })
@@ -46,4 +52,10 @@ gulp.task("min:css", function () {
         .pipe(gulp.dest("."));
 });
 
+gulp.task("copy:html", function () {
+    return gulp.src([paths.html])              
+        .pipe(gulp.dest(paths.webroot));
+});
+
 gulp.task("min", ["min:js", "min:css"]);
+gulp.task("copy", ["copy:html"]);
