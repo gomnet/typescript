@@ -12,13 +12,18 @@ var paths = {
     webroot: "./wwwroot/"
 };
 
+paths.images = "./images/**/*";
 paths.js = "./scripts/**/*.js";
 paths.css = "./styles/**/*.css";
 paths.html = "./**/*.html";
+paths.jss = paths.webroot + "js/"
+paths.imagess = paths.webroot + "images/"
 paths.minJs = paths.webroot + "js/**/*.min.js";
 paths.minCss = paths.webroot + "css/**/*.min.css";
 paths.concatJsDest = paths.webroot + "js/app.min.js";
 paths.HtmlDest = paths.webroot + "**/*.html";
+paths.ImageDest = paths.imagess + "**/*";
+paths.JsDest = paths.jss + "**/*";
 paths.concatCssDest = paths.webroot + "css/app.min.css";
 
 gulp.task("clean:html", function (cb) {
@@ -26,14 +31,17 @@ gulp.task("clean:html", function (cb) {
 });
 
 gulp.task("clean:js", function (cb) {
-    rimraf(paths.concatJsDest, cb);
+    rimraf(paths.JsDest, cb);
 });
 
 gulp.task("clean:css", function (cb) {
     rimraf(paths.concatCssDest, cb);
 });
+gulp.task("clean:images", function (cb) {
+    rimraf(paths.ImageDest, cb);
+});
 
-gulp.task("clean", ["clean:js", "clean:css", "clean:html"]);
+gulp.task("clean", ["clean:js", "clean:css", "clean:html", "clean:images"]);
 
 gulp.task("min:js", function () {
     return gulp.src([paths.js], { base: "." })
@@ -53,9 +61,19 @@ gulp.task("min:css", function () {
 });
 
 gulp.task("copy:html", function () {
-    return gulp.src([paths.html])              
+    return gulp.src([paths.html])
         .pipe(gulp.dest(paths.webroot));
 });
 
+gulp.task("copy:js", function () {
+    return gulp.src([paths.js])
+        .pipe(gulp.dest(paths.jss));
+});
+
+gulp.task("copy:images", function () {
+    return gulp.src([paths.images])
+        .pipe(gulp.dest(paths.imagess));
+});
+
 gulp.task("min", ["min:js", "min:css"]);
-gulp.task("copy", ["copy:html"]);
+gulp.task("copy", ["copy:html", "copy:js", "copy:images"]);

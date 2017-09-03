@@ -6,6 +6,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="scripts\dynamic-types.ts" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Content Include="Default.html">
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
     </Content>
@@ -19,9 +23,13 @@
 
   <ItemGroup>
     <TypeScriptCompile Include="scripts\car-v2.ts" />
+    <TypeScriptCompile Include="scripts\dynamic-types.ts" />
+    <TypeScriptCompile Include="scripts\timer.ts" />
+    <TypeScriptCompile Include="scripts\grammar.ts" />
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Pages\" />
     <Folder Include="wwwroot\" />
   </ItemGroup>
 
