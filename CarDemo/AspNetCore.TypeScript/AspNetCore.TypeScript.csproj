@@ -6,10 +6,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Remove="wwwroot\js\car-v2.ts" />
-  </ItemGroup>
-
-  <ItemGroup>
     <None Include="wwwroot\Default.html" />
   </ItemGroup>
 
@@ -21,10 +17,6 @@
 
   <ItemGroup>
     <TypeScriptCompile Include="scripts\car-v2.ts" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="wwwroot\js\" />
   </ItemGroup>
 
   <PropertyGroup Condition="'$(Configuration)' == 'Debug'">
